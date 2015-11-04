@@ -8,7 +8,7 @@ RUN wget -q -O '/opt/exist.jar' 'http://downloads.sourceforge.net/project/exist/
     rm -f '/opt/exist.jar' '/opt/options' 
 
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT /entrypoint.sh
+CMD ["/entrypoint.sh"]
 
 VOLUME /opt/exist/webapp/WEB-INF/data/
 
