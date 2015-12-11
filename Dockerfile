@@ -11,7 +11,7 @@ RUN wget -q -O '/opt/exist.jar' 'http://downloads.sourceforge.net/project/exist/
 
 ADD entrypoint.sh /entrypoint.sh
 CMD ["/entrypoint.sh"]
-
+ENV EXIST_HOME /opt/exist
 VOLUME /opt/exist/webapp/WEB-INF/data/
 
 EXPOSE 8080
