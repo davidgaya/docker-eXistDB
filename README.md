@@ -2,7 +2,7 @@
 
 This is a eXist DB image build on top of official Java image (therefore based in debian jessie).
 
-It is forked from dariah/exist. I did this fork because I wanted an image built on top of official
+It is forked from [dariah/exist](https://hub.docker.com/r/dariah/exist/). I did this fork because I wanted an image built on top of official
 images and that leverages the image cache of docker.
 
 eXist is an open source NoSQL database built on XML technology.
