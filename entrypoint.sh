@@ -19,8 +19,5 @@ quit
 EOF
 fi
 
-# prefix java command with exec to force java being process 1 and receiving docker signals
-sed -i 's/^\"${JAVA_RUN/exec \"${JAVA_RUN/'  /opt/exist/bin/startup.sh
-
 # lets start exist...
 exec /opt/exist/bin/startup.sh
