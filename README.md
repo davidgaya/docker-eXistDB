@@ -24,10 +24,10 @@ To start your container binding to port 8080:
 
     docker run -d -p 8080:8080 -e EXIST_ADMIN_PASSWORD=pass davidgaya/existdb:latest
 
-You are also allowed to manipulate the memory available for exist (default is 512M):
+You are also allowed to manipulate the max memory available for exist (default is 512M):
 
-    docker run -P -d -e EXIST_MEMORY=1024 -e EXIST_ADMIN_PASSWORD=pass davidgaya/exist:latest
+    docker run -P -d -e MAX_MEMORY=1024 -e EXIST_ADMIN_PASSWORD=pass davidgaya/exist:latest
 
-Then check if it works with:
+Then check it at:
 
     curl http://localhost:8080/exist/

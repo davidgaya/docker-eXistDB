@@ -1,13 +1,6 @@
 #!/bin/bash
 set -e
 
-# inject memory size
-if [ -n "$EXIST_MEMORY" ]; then
-    sed -i "s/Xmx%{MAX_MEMORY}m/Xmx${EXIST_MEMORY}m/g" /opt/exist/bin/functions.d/eXist-settings.sh
-else
-    sed -i "s/Xmx%{MAX_MEMORY}m/Xmx512m/g" /opt/exist/bin/functions.d/eXist-settings.sh
-fi
-
 # catch missing password
 if [ -n "$EXIST_ADMIN_PASSWORD" ]; then
 # inject password

@@ -10,6 +10,8 @@ RUN wget -q -O '/opt/exist.jar' 'https://bintray.com/artifact/download/existdb/r
     java -jar '/opt/exist.jar' -options '/opt/options.txt' && \
     rm -f '/opt/exist.jar' '/opt/options' 
 
+ENV MAX_MEMORY 512
+RUN sed -i "s/Xmx%{MAX_MEMORY}m/Xmx\${MAX_MEMORY}m/g" /opt/exist/bin/functions.d/eXist-settings.sh
 # prefix java command with exec to force java being process 1 and receiving docker signals
 RUN sed -i 's/^\"${JAVA_RUN/exec \"${JAVA_RUN/'  /opt/exist/bin/startup.sh
 
