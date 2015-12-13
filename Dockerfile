@@ -1,4 +1,4 @@
-FROM java:8
+FROM java:8-jre
 MAINTAINER David Gaya
 
 # eXistDB needs ant to automate common tasks like backup/restore or importing
